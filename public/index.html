@@ -24,6 +24,39 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+        <!-- EGIP API-->
+        <link
+            href="https://egiptest.mos.ru/jsapi/lib/ol-5.2.0.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://egiptest.mos.ru/jsapi/lib/ol-ext-3.0.1.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- ... -->
+        <script src="https://egiptest.mos.ru/jsapi/lib/proj4-2.4.4.js"></script>
+        <script src="https://egiptest.mos.ru/jsapi/lib/ol-5.2.0.js"></script>
+        <script src="https://egiptest.mos.ru/jsapi/lib/ol-ext-3.0.1.js"></script>
+        <script src="https://egiptest.mos.ru/jsapi/dist/egip.js"></script>
+        <script>
+            egip.setConfig({
+                /** `baseURL` will be prepended to `url` unless `url` is absolute.
+                 *  It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
+                 *  to methods of that instance.
+                 *  https://github.com/axios/axios
+                 */
+                baseURL: "https://egiptest.mos.ru/",
+
+                /**
+                 * `withCredentials` indicates whether or not cross-site Access-Control requests
+                 *  should be made using credentials
+                 *  https://github.com/axios/axios
+                 */
+                withCredentials: true,
+            });
+        </script>
         <title>MosBootCamp</title>
     </head>
     <body>
